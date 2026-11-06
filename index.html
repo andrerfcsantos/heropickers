@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Hero Pickers — Random hero and agent pickers for Overwatch and Valorant
+    </title>
+    <meta
+      name="description"
+      content="Free random pickers for Overwatch and Valorant. Filter down to the heroes or agents you actually want to play, roll one, or generate a full squad. No ads, no account."
+    />
+    <link rel="canonical" href="https://heropickers.com/" />
+    <meta name="theme-color" content="#0b0d12" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hero Pickers" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://heropickers.com/" />
+    <meta
+      property="og:title"
+      content="Hero Pickers — Overwatch and Valorant random pickers"
+    />
+    <meta
+      property="og:description"
+      content="Free random pickers for Overwatch and Valorant. Filter down to the heroes or agents you actually want to play, roll one, or generate a full squad."
+    />
+    <meta property="og:image" content="https://heropickers.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Hero Pickers — Overwatch Hero Picker and Valorant Agent Picker"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://www.owheropicker.com" />
+    <link rel="preconnect" href="https://www.valorantpicker.com" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Hero Pickers",
+        "url": "https://heropickers.com/",
+        "description": "Random hero and agent pickers for Overwatch and Valorant.",
+        "hasPart": [
+          {
+            "@type": "WebSite",
+            "name": "Overwatch Random Hero Picker",
+            "url": "https://www.owheropicker.com/"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Valorant Random Agent Picker",
+            "url": "https://www.valorantpicker.com/"
+          }
+        ]
+      }
+    </script>
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Hero ------------------------------------------------------------->
+      <section class="relative overflow-hidden">
+        <div
+          class="pointer-events-none absolute inset-x-0 -top-40 h-96 bg-[radial-gradient(60%_60%_at_30%_50%,rgba(248,158,74,0.16),transparent),radial-gradient(60%_60%_at_70%_50%,rgba(255,70,85,0.16),transparent)]"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative mx-auto max-w-6xl px-5 pt-16 pb-5 text-center sm:pt-24 sm:pb-5"
+        >
+          <h1
+            class="mx-auto max-w-3xl text-4xl leading-tight font-extrabold tracking-tight text-balance sm:text-6xl"
+          >
+            Can't decide <span class="wordmark">who to play?</span>
+          </h1>
+
+          <p
+            class="mx-auto mt-5 max-w-2xl text-lg text-pretty text-muted sm:text-xl"
+          >
+            Pick from the heroes and agents you
+            <em class="text-white not-italic">actually</em> want to play — not
+            the whole roster. Roll one for yourself, or generate a full squad
+            for the group.
+          </p>
+
+          <div
+            class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          >
+            <!-- No logos on these two: each game's mark is drawn in its own
+                 accent colour, which is exactly the button's background. They
+                 appear on the dark card headers below instead. -->
+            <a
+              href="https://www.owheropicker.com/"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-ow px-6 py-3 font-semibold text-ink no-underline transition-transform hover:brightness-110 active:scale-[0.98] sm:w-auto"
+            >
+              Overwatch Hero Picker
+            </a>
+            <a
+              href="https://www.valorantpicker.com/"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-val px-6 py-3 font-semibold text-ink no-underline transition-transform hover:brightness-110 active:scale-[0.98] sm:w-auto"
+            >
+              Valorant Agent Picker
+            </a>
+          </div>
+
+          <p class="mt-6 text-sm text-muted">Free, no ads, no account.</p>
+        </div>
+      </section>
+
+      <!-- The two pickers -------------------------------------------------->
+      <section id="pickers" class="mx-auto max-w-6xl px-5 py-8 sm:py-12">
+        <h2 class="sr-only">The pickers</h2>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <!-- Overwatch -->
+          <article
+            class="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-ow/50"
+          >
+            <div
+              class="flex items-center justify-center border-b border-line bg-[linear-gradient(135deg,rgba(248,158,74,0.22),rgba(248,158,74,0.04))] px-6 py-10"
+            >
+              <img
+                src="/imgs/overwatch/logo.svg"
+                alt="Overwatch logo"
+                width="72"
+                height="72"
+                class="h-16 w-16 transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <h3 class="text-2xl font-bold">Overwatch Hero Picker</h3>
+              <p class="mt-1 text-sm tracking-wide text-ow">owheropicker.com</p>
+
+              <p class="mt-4 text-pretty text-muted">
+                Tick the heroes you're happy to play — or a whole role — and let
+                it choose. Great for warming up, for climbing out of a one-trick
+                rut, or for running your own Mystery Heroes.
+              </p>
+
+              <ul class="mt-5 space-y-2 text-sm text-muted">
+                <li class="flex gap-2.5">
+                  <span class="text-ow" aria-hidden="true">▸</span>
+                  Filter by hero or by role — Tank, Damage, Support
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-ow" aria-hidden="true">▸</span>
+                  Squad Generator for full team compositions
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-ow" aria-hidden="true">▸</span>
+                  Randomize perks along with the hero
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-ow" aria-hidden="true">▸</span>
+                  Save presets and share a roll with a link
+                </li>
+              </ul>
+
+              <div class="mt-auto flex flex-wrap items-center gap-4 pt-7">
+                <a
+                  href="https://www.owheropicker.com/"
+                  class="inline-flex items-center justify-center rounded-lg bg-ow px-5 py-2.5 font-semibold text-ink no-underline transition-transform hover:brightness-110 active:scale-[0.98]"
+                >
+                  Open the picker
+                </a>
+                <a
+                  href="https://github.com/andrerfcsantos/overwatch-hero-picker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-muted underline-offset-4 transition-colors hover:text-white hover:underline"
+                >
+                  Source on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Valorant -->
+          <article
+            class="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-val/50"
+          >
+            <div
+              class="flex items-center justify-center border-b border-line bg-[linear-gradient(135deg,rgba(255,70,85,0.22),rgba(255,70,85,0.04))] px-6 py-10"
+            >
+              <img
+                src="/imgs/valorant/logo.webp"
+                alt="Valorant logo"
+                width="120"
+                height="68"
+                class="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <h3 class="text-2xl font-bold">Valorant Agent Picker</h3>
+              <p class="mt-1 text-sm tracking-wide text-val">
+                valorantpicker.com
+              </p>
+
+              <p class="mt-4 text-pretty text-muted">
+                Same idea, for Valorant. Narrow the pool to the agents you know
+                — or the ones you're trying to learn — and get one at random
+                instead of staring at the agent select clock.
+              </p>
+
+              <ul class="mt-5 space-y-2 text-sm text-muted">
+                <li class="flex gap-2.5">
+                  <span class="text-val" aria-hidden="true">▸</span>
+                  Filter by agent or by role — Duelist, Controller, Initiator,
+                  Sentinel
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-val" aria-hidden="true">▸</span>
+                  Squad Generator for a full five-stack
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-val" aria-hidden="true">▸</span>
+                  Save presets for your comfort picks
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-val" aria-hidden="true">▸</span>
+                  Share a roll or a squad with a link
+                </li>
+              </ul>
+
+              <div class="mt-auto flex flex-wrap items-center gap-4 pt-7">
+                <a
+                  href="https://www.valorantpicker.com/"
+                  class="inline-flex items-center justify-center rounded-lg bg-val px-5 py-2.5 font-semibold text-ink no-underline transition-transform hover:brightness-110 active:scale-[0.98]"
+                >
+                  Open the picker
+                </a>
+                <a
+                  href="https://github.com/andrerfcsantos/valorant-agent-picker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-muted underline-offset-4 transition-colors hover:text-white hover:underline"
+                >
+                  Source on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Support ---------------------------------------------------------->
+      <section id="support" class="mx-auto max-w-6xl px-5 pt-8 sm:pt-12">
+        <div
+          class="rounded-2xl border border-line bg-[linear-gradient(120deg,rgba(248,158,74,0.10),rgba(255,70,85,0.10))] p-7 sm:p-10"
+        >
+          <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">
+            Both sites are free, and stay that way
+          </h2>
+          <p class="mt-3 max-w-2xl text-pretty text-muted">
+            Both pickers are free to use and run without ads. There is no paid
+            tier and nothing is held back, so donations are the only way to
+            support them.
+          </p>
+          <p class="mt-3 max-w-2xl text-pretty text-muted">
+            They also need keeping up to date: every new hero and agent means
+            new art, new icons and a roster update, usually within days of
+            release. Donations pay for the hosting and for that ongoing work.
+          </p>
+
+          <div class="mt-7">
+            <a
+              href="https://www.buymeacoffee.com/heropickers"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 rounded-lg border border-line bg-surface px-5 py-2.5 font-medium no-underline transition-colors hover:border-ow/60"
+            >
+              <img
+                src="/imgs/shared/bmc.svg"
+                alt=""
+                width="20"
+                height="20"
+                class="h-5 w-5"
+              />
+              Buy me a coffee
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discord ---------------------------------------------------------->
+      <section id="discord" class="mx-auto max-w-6xl px-5 pt-6 pb-16 sm:pb-24">
+        <div class="rounded-2xl border border-line bg-surface p-7 sm:p-10">
+          <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Discord</h2>
+          <p class="mt-3 max-w-2xl text-pretty text-muted">
+            Each picker has its own server. It's the fastest way to report a
+            bug, ask for a feature, or say what you'd like to see next.
+          </p>
+
+          <div class="mt-7 flex flex-wrap items-center gap-3">
+            <a
+              href="https://discord.gg/rwQMrCa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 rounded-lg border border-line bg-surface-2 px-5 py-2.5 font-medium no-underline transition-colors hover:border-ow/60"
+            >
+              <img
+                src="/imgs/shared/discord.webp"
+                alt=""
+                width="20"
+                height="20"
+                class="h-5 w-5"
+              />
+              Overwatch Discord
+            </a>
+            <a
+              href="https://discord.gg/2yb3ZPzjve"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 rounded-lg border border-line bg-surface-2 px-5 py-2.5 font-medium no-underline transition-colors hover:border-val/60"
+            >
+              <img
+                src="/imgs/shared/discord.webp"
+                alt=""
+                width="20"
+                height="20"
+                class="h-5 w-5"
+              />
+              Valorant Discord
+            </a>
+          </div>
+
+          <p class="mt-6 text-sm text-muted">
+            Not on Discord? heropickers [at] gmail [dot] com
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-line">
+      <div
+        class="mx-auto max-w-6xl space-y-2 px-5 py-8 text-xs leading-relaxed text-muted/80"
+      >
+        <p>
+          These are fan-sites and are not affiliated with, endorsed or sponsored
+          by Blizzard Entertainment or Riot Games. All rights belong to their
+          respective owners.
+        </p>
+        <p>
+          Overwatch™ ©2016 Blizzard Entertainment, Inc. All rights reserved.
+          Overwatch is a trademark or registered trademark of Blizzard
+          Entertainment, Inc. in the U.S. and/or other countries.
+        </p>
+        <p>
+          Valorant Agent Picker was created under Riot Games' "Legal Jibber
+          Jabber" policy using assets owned by Riot Games. Riot Games does not
+          endorse or sponsor this project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Tailwind v4 infers its content sources from where this file lives, which
+   would miss the HTML entries sitting at the repo root. */
+@source "../index.html";
+@source "../404.html";
+
+@theme {
+  /* Portal palette. Deliberately neutral and dark so the two game accents
+     below are the only saturated colour on the page. */
+  --color-ink: #0b0d12;
+  --color-surface: #141821;
+  --color-surface-2: #1b2130;
+  --color-line: #262d3d;
+  --color-muted: #97a1b8;
+
+  /* Pulled from each picker so a card reads as that game before the text
+     is: Overwatch's orange, Valorant's red. */
+  --color-ow: #f89e4a;
+  --color-val: #ff4655;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ink);
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: #e7ebf3;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ow);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility wordmark {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-ow) 0%,
+    var(--color-val) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}

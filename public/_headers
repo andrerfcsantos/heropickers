@@ -1,0 +1,10 @@
+# https://developers.cloudflare.com/workers/static-assets/headers
+
+# Vite fingerprints everything under /assets, so it can be cached forever.
+/assets/*
+  Cache-Control: public,max-age=31536000,immutable
+
+# Copied straight from the pickers' repos, so these keep their original names
+# and need an explicit, shorter max-age.
+/imgs/*
+  Cache-Control: public,max-age=86400
