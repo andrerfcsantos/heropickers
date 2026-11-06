@@ -9,4 +9,9 @@
   "observability": {
     "enabled": true,
   },
+  // Workers Previews: one Preview per branch / pull request under this same
+  // Worker. The site is static assets only, so there are no bindings or vars
+  // to point elsewhere and the block stays empty, but Previews require it to
+  // exist. Preview URLs are public unless access controls are set up.
+  "previews": {},
 }

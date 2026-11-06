@@ -66,7 +66,19 @@ Both HTML files are registered in `vite.config.ts` under
 ```bash
 npm run deploy   # vp build && wrangler deploy
 npm run upload   # vp build && wrangler versions upload
+npm run deploy:preview   # vp build && wrangler preview
 ```
+
+`deploy:preview` publishes a [Workers Preview](https://developers.cloudflare.com/workers/previews/)
+named after the current Git branch (override with `-- --name <name>`). It
+prints a Preview URL that tracks the branch's latest deploy, plus a unique URL
+for that deployment. Preview settings live in the `previews` block of
+`wrangler.jsonc`; it is empty because the site has no bindings. Preview URLs
+are public unless access controls are configured.
+
+To have a Preview built and linked on every pull request, enable preview builds
+for the Worker in Workers Builds (Cloudflare dashboard → the Worker → Settings →
+Builds).
 
 ## Upgrading dependencies
 
